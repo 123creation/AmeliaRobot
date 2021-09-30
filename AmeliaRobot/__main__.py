@@ -96,9 +96,9 @@ buttons = [
 ]
 
 
-HELP_STRINGS = """
-`ʜɪ.. ɪ'ᴍ` Iron man [😄]({IRONMAN_HELP})
-`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..[.]({IRONMAN_HELP})`"""
+HELP_STRINGS = f"""
+`Hey there! My name is` [Iron Man]({IRONMAN_HELP}) 
+I have Quite a Few Features, Go Ahead and Check out!"""
 
 IRONMAN_IMG = "https://telegra.ph/file/6bc12550c98f0febaf002.jpg"
 IRONSTART_IMG = "https://telegra.ph/file/ca6aa3ed1c71eb7e50deb.jpg"
