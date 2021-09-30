@@ -1,1 +1,1 @@
-IRONMAN_HELP = "https://telegra.ph/file/b37cec509d121c8c63518.jpg"
+IRONMAN_HELP = "https://telegra.ph/file/6264f8d0992addef2921d.jpg"
