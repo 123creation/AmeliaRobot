@@ -13,7 +13,7 @@ from AmeliaRobot.modules import ALL_MODULES
 from AmeliaRobot.resources.images import IRONMAN_HELP
 from AmeliaRobot.modules.helper_funcs.chat_status import is_user_admin
 from AmeliaRobot.modules.helper_funcs.misc import paginate_modules
-import AmeliaRobot.modules.sql.users_sql as sql
+from AmeliaRobot.modules.sql import users_sql as sql
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
