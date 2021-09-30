@@ -116,7 +116,7 @@ HELP_STRINGS = f"""
 I have Many New And Powerful Features, Go Ahead and Check out!"""
 
 IRONMAN_IMG = "https://telegra.ph/file/6bc12550c98f0febaf002.jpg"
-IRONSTART_IMG = "https://telegra.ph/file/ca6aa3ed1c71eb7e50deb.jpg"
+IRONSTART_IMG = "https://telegra.ph/file/2352671cb1463491d321a.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project via [Paypal](#) or by contacting @itsmelegend\
