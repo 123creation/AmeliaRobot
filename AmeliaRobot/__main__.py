@@ -60,8 +60,7 @@ buttons = [
     [
         InlineKeyboardButton(
             text="➕ Add Iron Man To Your Group",
-            url="t.me/{}?startgroup=true".format(
-                context.bot.username))
+            url="t.me/Ironman_the_bot?startgroup=true"
     ],
     [
         InlineKeyboardButton(
