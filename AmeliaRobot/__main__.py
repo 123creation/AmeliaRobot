@@ -226,7 +226,7 @@ def start(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/XForceSupport")
+                  InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/PigasusSupport")
                   ],
                   [
                   InlineKeyboardButton(text="Lᴇɢᴇɴᴅ", url="https://t.me/Pavakkka")
