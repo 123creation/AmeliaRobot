@@ -27,6 +27,7 @@ from AmeliaRobot import (
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from AmeliaRobot.modules import ALL_MODULES
 from AmeliaRobot.resources.images import IRONMAN_HELP
+from AmeliaRobot.modules.sql.users_sql as sql
 from AmeliaRobot.modules.helper_funcs.chat_status import is_user_admin
 from AmeliaRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
@@ -75,8 +76,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-ʜᴇʟʟᴏ 🤗 {}, ɪᴍ {} ᴀ ʜɪɢʜʏ ᴀᴅᴠᴀɴᴄᴇᴅ ʙᴏᴛ ᴡɪᴛʜ ʟᴏᴛꜱ ᴏꜰ ᴀᴍᴀᴢɪɴɢ ᴛᴏᴏʟꜱ.
-`ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! ʜɪᴛ` /help   
+*Whassup! {}, It's Me {}!* 
+*An Iron Man themed group management bot with New And Powerful Features Made By This * [Legend](https://t.me/creationz321)!!
+• *Uptime:* `{}`
+• `{}` *users, across* `{}` *chats.*
 """
 
 buttons = [
@@ -213,7 +216,10 @@ def start(update: Update, context: CallbackContext):
                 IRONSTART_IMG,
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
-                    escape_markdown(context.bot.first_name)),
+                    escape_markdown(context.bot.first_name),
+                    escape_markdown(uptime),
+                    sql.num_users(),
+                    sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
