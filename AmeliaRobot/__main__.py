@@ -215,7 +215,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_video(
-            IRONMAN_IMG, caption= "<code>Iron Man is Here 😎\My System 👨‍💻Awake Since</code>: <code>{}</code>".format(
+            IRONMAN_IMG, caption= "<code>Iron Man is Here 😎\nMy System 👨‍💻Awake Since</code>: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -225,7 +225,7 @@ def start(update: Update, context: CallbackContext):
                   InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/XForceSupport")
                   ],
                   [
-                  InlineKeyboardButton(text="Sᴏᴜʀᴄᴇ", url="https://github.com/IzumiCypherX/EmiliaAnimeBot")
+                  InlineKeyboardButton(text="Lᴇɢᴇɴᴅ", url="https://t.me/Pavakkka")
                   ]
                 ]
             ),
