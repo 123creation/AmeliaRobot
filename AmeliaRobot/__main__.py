@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_video(
+        update.effective_message.reply_photo(
             IRONMAN_IMG, caption= "<code>Iron Man is Here 😎\nMy System 👨‍💻Awake Since</code>: <code>{}</code>".format(
                 uptime
             ),
