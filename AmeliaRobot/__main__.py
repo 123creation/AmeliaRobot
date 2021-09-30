@@ -85,16 +85,28 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ Iron Man ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/Ironman_the_bot?startgroup=true"),
+            text="➕ Add Iron Man To Your Group",
+            url="t.me/{}?startgroup=true".format(
+                context.bot.username))
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="amelia_"),
         InlineKeyboardButton(
-            text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
-        ),
+            text="🕶️ Legend",
+            url=f"https://t.me/creationz321"),
+        InlineKeyboardButton(
+            text="📢 Updates",
+            url="https://t.me/PigasusUpdates"),
+        InlineKeyboardButton(
+            text="🎉 Support",
+            url="https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
+       InlineKeyboardButton(
+           text="👨‍💻 Dev",
+           url="https://t.me/AASFCYBERKING"),                    
+       InlineKeyboardButton(
+           text="🤷 Help & Commands",
+             url="https://t.me/Ironman_the_bot?start=help"),
     ],
 ]
 
