@@ -26,6 +26,7 @@ from AmeliaRobot import (
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from AmeliaRobot.modules import ALL_MODULES
+from AmeliaRobot.resources.images import IRONMAN_HELP
 from AmeliaRobot.modules.helper_funcs.chat_status import is_user_admin
 from AmeliaRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
