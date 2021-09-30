@@ -99,8 +99,7 @@ HELP_STRINGS = """
 `ʜɪ.. ɪ'ᴍ` Iron man [😄](https://telegra.ph/file/6264f8d0992addef2921d.jpg)
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`"""
 
-amelia_IMG = "https://telegra.ph/file/329647a798cccb101aecf.jpg"
-IRONMAN_IMG = "https://telegra.ph/file/e12b3b6d6538c175ee0a0.mp4"
+IRONMAN_IMG = "https://telegra.ph/file/6bc12550c98f0febaf002.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project via [Paypal](#) or by contacting @itsmelegend\
