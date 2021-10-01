@@ -4,15 +4,15 @@ import re
 from sys import argv
 from typing import Optional
 
-from SaitamaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from AmeliaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater,pbot)
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from SaitamaRobot.modules import ALL_MODULES
-from SaitamaRobot.modules.helper_funcs.chat_status import is_user_admin
-from SaitamaRobot.modules.helper_funcs.misc import paginate_modules
-import SaitamaRobot.modules.sql.users_sql as sql
+from AmeliaRobot.modules import ALL_MODULES
+from AmeliaRobot import  is_user_admin
+from AmeliaRobot.modules.helper_funcs.misc import paginate_modules
+import AmeliaRobot.modules.sql.users_sql as sql
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
@@ -52,8 +52,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Eureka! {}, myself {}!* 
-*An Anime themed group management bot from* [Steins;Gate](https://anilist.co/anime/9253)!!
+*Whassup! {}, It's Me {}!* 
+*An Iron Man themed group management bot with New And Powerful Features Made By* [123Creation](https://t.me/creationz321)!!
 
 • *Uptime:* `{}`
 • `{}` *users, across* `{}` *chats.*
@@ -64,13 +64,13 @@ HELP_STRINGS = """
 *AI Chatbot*, *Anime*, *Music*, *Notes*, *Filters*, *NSFW* *and more!*
 
 🎛 *All commands can either be used with* `/` *or* `!`.
-🎛 *Reach out for support:* @KurisuSupport [.](https://telegra.ph/file/2291942331f135e3292ee.png)
+🎛 *Reach out for support:* @PigasusSupport [.](https://telegra.ph/file/ca72ed37722487f962cae.jpg)
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-KURISU_IMG = "https://telegra.ph/file/6152bf2f73ca8ea30772a.png"
-KURISUIMGSTART = "https://telegra.ph/file/bd01a439fefb53170b36f.gif"
+IRONMAN_START = "https://telegra.ph/file/98fffda20d333da671f20.jpg"
+IRONMAN_IMG = "https://telegra.ph/file/2352671cb1463491d321a.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer of the Base code, Paul
@@ -87,7 +87,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("SaitamaRobot.modules." +
+    imported_module = importlib.import_module("AmeliaRobot.modules." +
                                               module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
@@ -183,7 +183,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
-                KURISU_IMG,
+                IRONMAN_IMG,
                 caption=PM_START_TEXT.format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
@@ -195,33 +195,33 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="➕ Add Kurisu To Your Group",
+                            text="➕ Add Iron Man To Your Group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
-                             text="⚙️ Support",
+                             text="🎉 Support",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
-                             text="🎉 Updates",
+                             text="📢 Updates",
                              url="https://t.me/steinsupdates"),
                          InlineKeyboardButton(
-                             text="🗃 Guide",
+                             text="🕶️ Legend",
                              url="https://t.me/Steinsupdates/7"),
               
                     ],
                      [
                         InlineKeyboardButton(
-                             text="Anime Chat",
-                             url="https://t.me/ias_chats"),                    
+                             text="👨‍💻 Dev",
+                             url="https://t.me/AASFCYBERKING"),                    
                         InlineKeyboardButton(
-                             text="Help & Commands",
-                             url="https://t.me/Kurisu_Makise_Robot?start=help"),      
+                             text="🤷 Help & Commands",
+                             url="https://t.me/Ironman_the_bot?start=help"),      
                     ]]))
     else:
         update.effective_message.reply_video(
-                KURISUIMGSTART)
+                IRONMAN_START)
         update.effective_message.reply_text(
             "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
             .format(uptime),
@@ -585,7 +585,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Kurisu Makise is deployed sucessfully...")
+        LOGGER.info("Iron Man is deployed sucessfully...")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
