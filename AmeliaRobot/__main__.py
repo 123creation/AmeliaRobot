@@ -82,7 +82,7 @@ PM_START_TEXT = """
 *An Iron Man themed group management bot with New And Powerful Features Made By* [123Creation](https://t.me/creationz321)!!
 
 • *Uptime:* `{}`
-• `{}` *users, across* `{}` *chats.*
+• `79` *users, across* `17` *chats.*
 """
 
 HELP_STRINGS = """
@@ -214,8 +214,6 @@ def start(update: Update, context: CallbackContext):
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
                     escape_markdown(uptime),
-                    sql.num_users(),
-                    sql.num_chats()),
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
