@@ -37,7 +37,6 @@ from AmeliaRobot import (
     TOKEN,
     URL,
     WEBHOOK,
-    REPOSITORY, 
     WHITELIST_CHATS, 
     BL_CHATS,
     pbot,
